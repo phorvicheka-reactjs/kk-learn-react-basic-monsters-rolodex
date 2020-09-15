@@ -1,0 +1,3 @@
+[submodule "lifecycles-lesson"]
+	path = lifecycles-lesson
+	url = https://github.com/ZhangMYihua/lifecycles-lesson.git
