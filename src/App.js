@@ -5,6 +5,7 @@ import CardList from './components/card-list/card-list.component';
 class App extends Component {
     state = {
         monsters: [],
+        searchField: '',
     };
 
     componentDidMount() {
@@ -16,6 +17,15 @@ class App extends Component {
     render() {
         return (
             <div className='App'>
+                <input
+                    type='search'
+                    placeholder='search monsters'
+                    onChange={(event) => {
+                        this.setState({
+                            searchField: event.target.value,
+                        }, () => {console.log(this.state.searchField);});
+                    }}
+                />
                 <CardList name='MyCard' monsters={this.state.monsters} />
             </div>
         );
